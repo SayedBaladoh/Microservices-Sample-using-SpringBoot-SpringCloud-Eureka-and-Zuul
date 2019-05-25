@@ -1,4 +1,3 @@
---password: sayedbaladoh
 MERGE INTO `users` (`id`, `organization_id`, `site_id`, `name`, `email`, `phone`, `position`) VALUES
 	(1, 1, 1, 'Sayed Mohamed', 'sayed@test.com', '010123456789', 'Manager'),
 	(2, 1, 2, 'Ahmed Mahmoud', 'ahmed@teat.com', '01097654321', 'Developer'),
