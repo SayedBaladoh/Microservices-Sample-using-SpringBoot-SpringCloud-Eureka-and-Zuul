@@ -9,10 +9,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sayedbaladoh</groupId>
-	<artifactId>site-service</artifactId>
+	<artifactId>organization-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>site-service</name>
-	<description>Site microservice using Spring Boot and Spring Cloud</description>
+	<name>organization-service</name>
+	<description>Organization microservice using Spring Boot and Spring Cloud</description>
 
 	<properties>
 		<java.version>1.8</java.version>

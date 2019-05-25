@@ -57,7 +57,7 @@ public class SiteController {
 		return siteService.getByOrganizationId(organizationId);
 	}
 
-	@GetMapping("/organization/{organizationId}/with-users")
+	@GetMapping("/organization/{organizationId}/users")
 	public List<Site> findByOrganizationWithEmployees(@PathVariable("organizationId") Long organizationId) {
 		List<Site> sites = siteService.getByOrganizationId(organizationId);
 		sites.forEach(d -> d.setUsers(userClient.findBySiteId(d.getId())));

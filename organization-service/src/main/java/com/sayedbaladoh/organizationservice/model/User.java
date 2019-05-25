@@ -1,4 +1,4 @@
-package com.sayedbaladoh.siteservice.model;
+package com.sayedbaladoh.organizationservice.model;
 
 /**
  * User Entity
