@@ -11,7 +11,7 @@ import com.sayedbaladoh.siteservice.model.User;
 @FeignClient(name = "user-service")
 public interface UserClient {
 	
-	@GetMapping("/users/site/{siteId}")
+	@GetMapping("/site/{siteId}")
 	List<User> findBySiteId(@PathVariable("siteId") Long siteId);
 	
 }

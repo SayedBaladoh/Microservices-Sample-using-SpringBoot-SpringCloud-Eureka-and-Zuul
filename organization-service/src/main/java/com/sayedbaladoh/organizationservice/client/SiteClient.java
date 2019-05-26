@@ -11,10 +11,10 @@ import com.sayedbaladoh.organizationservice.model.Site;
 @FeignClient(name = "site-service")
 public interface SiteClient {
 
-	@GetMapping("/sites/organization/{organizationId}")
+	@GetMapping("/organization/{organizationId}")
 	public List<Site> findByOrganization(@PathVariable("organizationId") Long organizationId);
 
-	@GetMapping("/sites/organization/{organizationId}/with-employees")
-	public List<Site> findByOrganizationWithEmployees(@PathVariable("organizationId") Long organizationId);
+	@GetMapping("/organization/{organizationId}/with-users")
+	public List<Site> findByOrganizationWithUsers(@PathVariable("organizationId") Long organizationId);
 
 }

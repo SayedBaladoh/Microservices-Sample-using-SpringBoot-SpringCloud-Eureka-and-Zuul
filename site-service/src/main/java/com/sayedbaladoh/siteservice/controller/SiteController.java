@@ -24,7 +24,6 @@ import com.sayedbaladoh.siteservice.service.SiteService;
  *
  */
 @RestController
-@RequestMapping("/sites")
 public class SiteController {
 
 	@Autowired
@@ -57,10 +56,10 @@ public class SiteController {
 		return siteService.getByOrganizationId(organizationId);
 	}
 
-	@GetMapping("/organization/{organizationId}/users")
-	public List<Site> findByOrganizationWithEmployees(@PathVariable("organizationId") Long organizationId) {
+	@GetMapping("/organization/{organizationId}/with-users")
+	public List<Site> findByOrganizationWithUsers(@PathVariable("organizationId") Long organizationId) {
 		List<Site> sites = siteService.getByOrganizationId(organizationId);
-		sites.forEach(d -> d.setUsers(userClient.findBySiteId(d.getId())));
+		sites.forEach(s -> s.setUsers(userClient.findBySiteId(s.getId())));
 		return sites;
 	}
 }

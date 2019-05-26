@@ -25,7 +25,6 @@ import com.sayedbaladoh.organizationservice.service.OrganizationService;
  *
  */
 @RestController
-@RequestMapping("/organizations")
 public class OrganizationController {
 
 	@Autowired
@@ -56,7 +55,7 @@ public class OrganizationController {
 			return new ResponseEntity<>("Organization not found with id: " + id, HttpStatus.NOT_FOUND);
 	}
 
-	@GetMapping("/{id}/sites")
+	@GetMapping("/{id}/with-sites")
 	public Organization findByIdWithSites(@PathVariable("id") Long id) {
 		Optional<Organization> organizationOpt = organizationService.get(id);
 		Organization organization = null;
@@ -67,20 +66,20 @@ public class OrganizationController {
 		return organization;
 	}
 
-	@GetMapping("/{id}/sites/users")
-	public Organization findByIdWithSitesAndEmployees(@PathVariable("id") Long id) {
+	@GetMapping("/{id}/with-sites-with-users")
+	public Organization findByIdWithSitesAndUsers(@PathVariable("id") Long id) {
 
 		Optional<Organization> organizationOpt = organizationService.get(id);
 		Organization organization = null;
 		if (organizationOpt.isPresent()) {
 			organization = organizationOpt.get();
-			organization.setSites(siteClient.findByOrganizationWithEmployees(organization.getId()));
+			organization.setSites(siteClient.findByOrganizationWithUsers(organization.getId()));
 		}
 		return organization;
 	}
 
-	@GetMapping("/{id}/employees")
-	public Organization findByIdWithEmployees(@PathVariable("id") Long id) {
+	@GetMapping("/{id}/with-users")
+	public Organization findByIdWithUsers(@PathVariable("id") Long id) {
 		Optional<Organization> organizationOpt = organizationService.get(id);
 		Organization organization = null;
 		if (organizationOpt.isPresent()) {

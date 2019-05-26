@@ -24,7 +24,6 @@ import com.sayedbaladoh.userservice.model.User;
  *
  */
 @RestController
-@RequestMapping("/users")
 public class UserController {
 
 	@Autowired

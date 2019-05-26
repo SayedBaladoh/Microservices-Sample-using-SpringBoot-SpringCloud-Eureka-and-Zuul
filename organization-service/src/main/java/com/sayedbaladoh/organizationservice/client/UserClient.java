@@ -11,7 +11,7 @@ import com.sayedbaladoh.organizationservice.model.User;
 @FeignClient(name = "user-service")
 public interface UserClient {
 
-	@GetMapping("/users/organization/{organizationId}")
+	@GetMapping("/organization/{organizationId}")
 	List<User> findByOganizationId(@PathVariable("organizationId") Long organizationId);
 
 }
