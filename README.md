@@ -31,7 +31,7 @@ This project is created using the following technologies:
 	+ Spring Web
 	+ Spring Data JPA
 	+ Spring Devtools
-	+ spring Actuator
+	+ Spring Actuator
 	+ H2 In-Memory database
 
 4. Maven Dependency Management
@@ -47,13 +47,13 @@ You need to install the following software:
 
 ### Developing Steps
 The steps to be taken in order to create working microservices-based system using Spring Cloud:
- Step 1. Creating service discovery with Spring Cloud Netflix Eureka
- Step 2. Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign
- 		*  User microservice
- 		*  Site microservice
- 		*  Organization microservice
-Step 3. Creating API gateway using Spring Cloud Netflix Zuul
-Step 4. Running and testing applications
+	Step 1. Creating service discovery with Spring Cloud Netflix Eureka
+	Step 2. Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign
+		*  User microservice
+		*  Site microservice
+		*  Organization microservice
+	Step 3. Creating API gateway using Spring Cloud Netflix Zuul
+	Step 4. Running and testing applications
  
 ### Setup
 To run this project, install it locally as follow:
@@ -72,7 +72,7 @@ To run this project, install it locally as follow:
 	+ open `src/main/resources/application.properties` file
 	+ change `server.port` property
 
-	For the API Gateway service and microservices you can change the default `port`
+	For the API Gateway service you can change the default `port`
 
 	+ open `src/main/resources/application.yml` file
 	+ change `server.port` property	
@@ -86,54 +86,54 @@ To run this project, install it locally as follow:
 	mvn spring-boot:run
 	```
 	
-	The server will start on port `8761` by default, So once you have successfully started application you'll be able to visit the Eureka Dashboard under address `http://localhost:8761`.
+	The server will start on port `8761` by default, So once you have successfully started application you'll be able to visit the Eureka dashboard under address `http://localhost:8761`.
 	
-	If you changed the port in `src/main/resources/application.properties` file, use your custom port `http://localhost:**port**`.
+	If you changed the port in `src/main/resources/application.properties` file, use your custom port `http://localhost:port`.
 
 4. **Run the User microservice application**
 
-	You can run the User microservice by typing the following command
+	You can run the user microservice by typing the following command
 
 	```bash
 	cd user-service
 	mvn spring-boot:run
 	```
 	
-	The User microservice will start on port `8081` by default, So you'll be able to visit the User microservice under address `http://localhost:8081`. 
+	The user microservice will start on port `8081` by default, So you'll be able to visit the user microservice under address `http://localhost:8081`. 
 	
-	If you changed the port in  `src/main/resources/application.properties` file, use your custom port `http://localhost:**port**`.
+	If you changed the port in  `src/main/resources/application.properties` file, use your custom port `http://localhost:port`.
 	
-	**But we will use the address of Zuul API Gateway as a routing address for all microservice requests**.
+	But we will use the address of **Zuul API Gateway** as a routing address for all microservice requests.
 
 5. **Run the Site microservice application**
 
-	You can run the Site microservice by typing the following command
+	You can run the site microservice by typing the following command
 
 	```bash
 	cd site-service
 	mvn spring-boot:run
 	```
 	
-	The Site microservice will start on port `8082` by default, So you'll be able to visit the Site microservice under address `http://localhost:8082`.
+	The site microservice will start on port `8082` by default, So you'll be able to visit the site microservice under address `http://localhost:8082`.
 	
-	If you changed the port in  `src/main/resources/application.properties` file, use your custom port `http://localhost:**port**`.
+	If you changed the port in  `src/main/resources/application.properties` file, use your custom port `http://localhost:port`.
 
-	**But we will use the address of Zuul API Gateway as a routing address for all microservice requests**.
+	But we will use the address of **Zuul API Gateway** as a routing address for all microservice requests.
 	
 6. **Run the Organization microservice application**
 
-	You can run the Organization microservice by typing the following command
+	You can run the organization microservice by typing the following command
 
 	```bash
 	cd organization-service
 	mvn spring-boot:run
 	```
 	
-	The Organization microservice will start on port `8083` by default, So you'll be able to visit the Organization microservice under address `http://localhost:8083`. 
+	The organization microservice will start on port `8083` by default, So you'll be able to visit the organization microservice under address `http://localhost:8083`. 
 	
-	If you changed the port in  `src/main/resources/application.properties` file, use your custom port `http://localhost:**port**`.
+	If you changed the port in  `src/main/resources/application.properties` file, use your custom port `http://localhost:port`.
 	
-	**But we will use the address of Zuul API Gateway as a routing address for all microservice requests**.	
+	But we will use the address of **Zuul API Gateway** as a routing address for all microservice requests.	
 	
 7. **Run the API gateway application**
 
@@ -144,9 +144,9 @@ To run this project, install it locally as follow:
 	mvn spring-boot:run
 	```
 	
-	The server will start on port `8080` by default, So once you have successfully started application you'll be able to visit API Gateway under address `http://localhost:8080`.
+	The server will start on port `8080` by default, So once you have successfully started application you'll be able to visit API gateway under address `http://localhost:8080`.
 	
-	If you changed the port in `src/main/resources/application.yml` file, use your custom port `http://localhost:**port**`.
+	If you changed the port in `src/main/resources/application.yml` file, use your custom port `http://localhost:port`.
 	
 	**Zuul API Gateway will forward the request to the specific microservice based on its proxy configuration. Such request will also be load balances by ribbon client.**
 	
@@ -161,12 +161,12 @@ To run this project, install it locally as follow:
 	java -jar target/service_name-0.0.1-SNAPSHOT.jar
 	```
 	
-	Note: * *service_directory*: the directory of the service.
-			* *service_name*: the name of the service.
+	Note: + *service_directory*: the directory of the service.
+			+ *service_name*: the name of the service.
 
 9. **Run additional instances from microservices**
 
-	You can run more instances of the microservices (User, Site, Organization:
+	You can run more instances of the microservices (User, Site, Organization):
 	
 	* Using eclipse just edit run command of your application (Run configurations…) and add VM parameter `-DPORT=…` or `-Dserver.port=…`.
 	
@@ -180,35 +180,35 @@ To run this project, install it locally as follow:
 
 To access the applications use the following endpoints
 
-* **Eureka Discovery Service **
+* **Eureka Discovery Service**
 
-	After running discovery-service its monitoring console available on 8761 port.
+	After running discovery-service, its monitoring console available on `8761` port.
 
-	+ `http://localhost:8761`
+	`http://localhost:8761`
 	
 	![Eureka Discovery Dashboard](EurekaDashboard.png)
 	
-	Now take a look on Eureka monitoring console: We’ve got one instance of Site and Organization microservices running on default ports (8082, 8083) and two instances of user microservice on 8081, 8085 ports registered on discovery server. 
+	Now take a look on Eureka monitoring console: We’ve got one instance of Site and Organization microservices running on default ports (8082, 8083) and two instances of user microservice on (8081, 8085) ports registered on discovery server. 
 
 * **API Gateway and Microservices**
 		
-	+ View API Gateway service info `http://localhost:8080/actuator/info`
+	+ View info about `API Gateway` service `http://localhost:8080/actuator/info`
 	
 	+ Check Health for `API Gateway` service `http://localhost:8080/actuator/health`
 		
 	Zuul is configured to be available under its default port 8080 and it forwards requests:
 	* From `/api/users/` path to `user-service` 
-	* From `/api/sites/ to `site-service`
+	* From `/api/sites/` to `site-service`
 	* From `/api/organizations/` to `organization-service`
 	
 	 When URL `http://localhost:8080/api/users/1` is called several times the Zuul make load balanced between two instances of each user microservice instances.
 	 Also when we shut down one of microservice instance we can take a look that it is unregistered from Eureka server dashboard.	
 
 ## Sample Requests
-CURL GET commands samples for different (User, Site, Organization) microservices using `Zuul API Gateway` address:
+CURL GET command samples for different (User, Site, Organization) microservices using `Zuul API Gateway address`:
 
 ### User APIs
-* Display User microservice info
+* Display info about User microservice
 	
 	```bash
 	curl -X GET \
@@ -264,7 +264,7 @@ CURL GET commands samples for different (User, Site, Organization) microservices
 
 ### Site APIs
 
-* Display Site microservice info
+* Display info about Site microservice
 	
 	```bash
 	curl -X GET \
@@ -320,7 +320,7 @@ CURL GET commands samples for different (User, Site, Organization) microservices
 
 ### Organization APIs
 
-* Display Organization microservice info
+* Display info about Organization microservice
 	
 	```bash
 	curl -X GET \
@@ -382,13 +382,13 @@ CURL GET commands samples for different (User, Site, Organization) microservices
 	  -H 'cache-control: no-cache'
 	```
 
-#### About me
+## About me
 
 I am Sayed Baladoh - Phd. Senior Software Engineer. I like software development. You can contact me via:
 
 * [LinkedIn+](https://www.linkedin.com/in/sayed-baladoh-227aa66b/)
 * [Mail](sayedbaladoh@yahoo.com)
-* [Phone](+20 1004337924)
+* [Phone](+201004337924)
 
 _**Any improvement or comment about the project is always welcome! As well as others shared their code publicly I want to share mine! Thanks!**_
 
