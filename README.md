@@ -48,13 +48,16 @@ You need to install the following software:
 ### Developing Steps
 The steps to be taken in order to create working microservices-based system using Spring Cloud:
 	
- **Step 1.** Creating service discovery with Spring Cloud Netflix Eureka
- **Step 2.** Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign
-		*  User microservice
-		*  Site microservice
-		*  Organization microservice
- **Step 3.** Creating API gateway using Spring Cloud Netflix Zuul
- **Step 4.** Running and testing applications
+**Step 1.** Creating service discovery with Spring Cloud Netflix Eureka
+ 
+**Step 2.** Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign
+	*  User microservice
+	*  Site microservice
+	*  Organization microservice
+
+**Step 3.** Creating API gateway using Spring Cloud Netflix Zuul
+
+**Step 4.** Running and testing applications
  
 ### Setup
 To run this project, install it locally as follow:
@@ -387,9 +390,9 @@ CURL GET command samples for different (User, Site, Organization) microservices 
 
 I am Sayed Baladoh - Phd. Senior Software Engineer. I like software development. You can contact me via:
 
-* <a href="https://www.linkedin.com/in/sayed-baladoh-227aa66b/">LinkedIn</a>
-* <a href="mailto:sayedbaladoh@yahoo.com">Email sayedbaladoh@yahoo.com</a>
-* <a href="tel:+201004337924">Call +20 1004337924</a>
+* [LinkedIn+](https://www.linkedin.com/in/sayed-baladoh-227aa66b/)
+* [Mail](mailto:sayedbaladoh@yahoo.com)
+* [Phone +20 1004337924](tel:+201004337924)
 
 _**Any improvement or comment about the project is always welcome! As well as others shared their code publicly I want to share mine! Thanks!**_
 
