@@ -50,7 +50,7 @@ The steps to be taken in order to create working microservices-based system usin
 	
 **Step 1.** Creating service discovery with Spring Cloud Netflix Eureka
  
-**Step 2.** Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign
+**Step 2.** Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign:
 
  + User microservice
  + Site microservice
