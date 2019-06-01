@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,20 +28,26 @@ import com.sayedbaladoh.userservice.model.User;
 public class UserController {
 
 	@Autowired
+	 private Environment environment;
+	
+	@Autowired
 	private UserService userService;
 
 	@PostMapping
 	public User add(@RequestBody User user) {
+		System.out.println("User.server.port: " + environment.getProperty("local.server.port"));
 		return userService.save(user);
 	}
 
 	@GetMapping
 	public List<User> findAll() {
+		System.out.println("User.server.port: " + environment.getProperty("local.server.port"));
 		return userService.getAll();
 	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<?> findById(@PathVariable("id") Long id) {
+		System.out.println("User.server.port: " + environment.getProperty("local.server.port"));
 		Optional<User> user = userService.get(id);
 		if (user.isPresent())
 			return new ResponseEntity<>(user.get(), HttpStatus.OK);
@@ -50,11 +57,13 @@ public class UserController {
 
 	@GetMapping("/site/{siteId}")
 	public List<User> findBySite(@PathVariable("siteId") Long siteId) {
+		System.out.println("User.server.port: " + environment.getProperty("local.server.port"));
 		return userService.getBySiteId(siteId);
 	}
 
 	@GetMapping("/organization/{organizationId}")
 	public List<User> findByOrganization(@PathVariable("organizationId") Long organizationId) {
+		System.out.println("User.server.port: " + environment.getProperty("local.server.port"));
 		return userService.getByOrganizationId(organizationId);
 	}
 
