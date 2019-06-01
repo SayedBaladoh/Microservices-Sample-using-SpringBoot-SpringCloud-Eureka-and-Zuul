@@ -22,7 +22,7 @@ This project is created using the following technologies:
 1. Java 8
 2. Spring Boot in cloud-native development:
 	
-	+ **Spring Cloud Netflix Eureka** - Registration and Discovery service for all microservices
+	+ **Spring Cloud Netflix Eureka** – Registration and Discovery service for all microservices
 	+ **Spring Cloud Netflix Zuul** – API Gateway service that provides dynamic routing, and load balancer
 	+ **Spring Cloud Netflix Feign** – Declarative REST client
 	
@@ -47,6 +47,7 @@ You need to install the following software:
 
 ### Developing Steps
 The steps to be taken in order to create working microservices-based system using Spring Cloud:
+	
 	Step 1. Creating service discovery with Spring Cloud Netflix Eureka
 	Step 2. Building the microservices using Spring Boot, Spring Cloud and communication between them with Spring Cloud Open Feign
 		*  User microservice
@@ -161,8 +162,8 @@ To run this project, install it locally as follow:
 	java -jar target/service_name-0.0.1-SNAPSHOT.jar
 	```
 	
-	Note: + *service_directory*: the directory of the service.
-			+ *service_name*: the name of the service.
+	+ *service_directory*: the directory of the service.
+	+ *service_name*: the name of the service.
 
 9. **Run additional instances from microservices**
 
@@ -198,8 +199,8 @@ To access the applications use the following endpoints
 		
 	Zuul is configured to be available under its default port 8080 and it forwards requests:
 	* From `/api/users/` path to `user-service` 
-	* From `/api/sites/` to `site-service`
-	* From `/api/organizations/` to `organization-service`
+	* From `/api/sites/` path to `site-service`
+	* From `/api/organizations/` path to `organization-service`
 	
 	 When URL `http://localhost:8080/api/users/1` is called several times the Zuul make load balanced between two instances of each user microservice instances.
 	 Also when we shut down one of microservice instance we can take a look that it is unregistered from Eureka server dashboard.	
@@ -387,8 +388,8 @@ CURL GET command samples for different (User, Site, Organization) microservices 
 I am Sayed Baladoh - Phd. Senior Software Engineer. I like software development. You can contact me via:
 
 * [LinkedIn+](https://www.linkedin.com/in/sayed-baladoh-227aa66b/)
-* [Mail](sayedbaladoh@yahoo.com)
-* [Phone](+201004337924)
+* [Mail](mailto:sayedbaladoh@yahoo.com)
+* [Phone](tel:+201004337924)
 
 _**Any improvement or comment about the project is always welcome! As well as others shared their code publicly I want to share mine! Thanks!**_
 
